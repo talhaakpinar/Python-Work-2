@@ -7,17 +7,16 @@ class Insan():
         self.sehir = sehir
         self.yetenekler = []
 
-kisi = Insan("talha", "akbinar", 23, "turkiye", "istanbul", "")
+
+kisi = Insan(input("Adınızı Giriniz: "), input("Soyadınızı Giriniz: "), int(input("Yaşınızı Giriniz: ")), input("Ülkenizi Giriniz: "), input("Şehirinizi Giriniz: "), "")
 
 def yetenek_ekle():
-    kisi.yetenekler.append('fitness yapmak')
-    kisi.yetenekler.append('futbol oynamak')
-    kisi.yetenekler.append('playstation oynamak')
-    print("yetenekler: " + str(kisi.yetenekler))
+    kisi.yetenekler.append(input("Yetenek Giriniz: "))
+    kisi.yetenekler.append(input("Yetenek Giriniz: "))
+    kisi.yetenekler.append(input("Yetenek Giriniz: "))
 
 def kisi_bilgileri(kisi):
-   return print("ad soyad: " + kisi.ad,
-          kisi.soyad + "\n" + "yas: " + str(kisi.yas) + "\n" + "ulke: " + kisi.ulke + "\n" + "sehir: " + kisi.sehir)
+    return print("Ad Soyad: " + kisi.ad, kisi.soyad + "\n" + "Yas: " + str(kisi.yas) + "\n" + "Ulke: " + kisi.ulke + "\n" + "Sehir: " + kisi.sehir + ("\nYetenekler: " + str(kisi.yetenekler)))
 
-kisi_bilgileri(kisi)
 yetenek_ekle()
+kisi_bilgileri(kisi)
